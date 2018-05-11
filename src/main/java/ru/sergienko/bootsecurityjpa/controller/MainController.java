@@ -35,7 +35,7 @@ public class MainController {
     @RequestMapping(value = "/logoutSuccessful", method = RequestMethod.GET)
     public String logoutSuccessufPage(Model model) {
         model.addAttribute("title", "Logout");
-        return "logoutSuccessufPage";
+        return "logoutSuccessfulPage";
     }
 
     @RequestMapping(value = "/userInfo", method = RequestMethod.GET)

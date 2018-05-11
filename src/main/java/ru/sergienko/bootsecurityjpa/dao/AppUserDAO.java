@@ -17,7 +17,7 @@ public class AppUserDAO {
 
     public AppUser findUserAccount(String userName) {
         try {
-            String sql = "Select e from " + AppUser.class.getName() + " e Where e.userName =: userName";
+            String sql = "Select e from " + AppUser.class.getName() + " e Where e.userName =:userName";
             Query query = entityManager.createQuery(sql, AppUser.class);
             query.setParameter("userName", userName);
             return (AppUser) query.getSingleResult();
