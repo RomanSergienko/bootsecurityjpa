@@ -7,13 +7,16 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 import ru.sergienko.bootsecurityjpa.dao.AppRoleDAO;
 import ru.sergienko.bootsecurityjpa.dao.AppUserDAO;
 import ru.sergienko.bootsecurityjpa.entity.AppUser;
 
+import javax.xml.ws.ServiceMode;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private AppUserDAO appUserDAO;
